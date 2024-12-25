@@ -1,0 +1,11 @@
+header h1{
+    font-size: 3rem;
+    font-weight: 400;
+}
+
+.header-social{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 20px;
+}
