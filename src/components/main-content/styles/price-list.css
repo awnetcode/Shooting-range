@@ -1,0 +1,19 @@
+.ammo-price-list{
+    width: 60%;
+    list-style-type: none;
+    text-align: left;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.ammo-price{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 1rem;
+    text-decoration: none;
+}
+
+.price{
+    padding: 1rem;
+}
