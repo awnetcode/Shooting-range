@@ -1,0 +1,14 @@
+.gun-area{
+    display: flex;
+    column-gap: 30px;
+    padding: 20px;
+}
+
+.gun-area span{
+    display: block;
+    padding: .5rem;
+}
+
+.gun-image{
+    width: 400px;
+}

@@ -3,18 +3,24 @@ import Guns from '../Guns-data';
 
 const OurGuns = () =>{
 
-    {Guns.map((gun, index) => {
-        console.log(gun);
-        console.log(index);
-        gun.name;
-    })}
     return(
         <>
+        <div className="guns-area">
+        {Guns.map((gun, index) => (
+            <div className="gun-area" key={index}>
+                <img className='gun-image' src={gun.image} alt={ gun.name } />
+                <div className="gun-data">
+                <h2 key={ gun.name }>{ gun.name }</h2>
+                <span>Kaliber: {gun.caliber}</span>
+                <span>Cena: {gun.pricePerRound} PLN / strzał</span>
+                </div>
+            </div>
+        )
+        )}
+        </div>
         Guns are Awesome!
-        <img src={Guns[3].image} alt="" />
         </>
     )
-
 }
 
 export default OurGuns;
