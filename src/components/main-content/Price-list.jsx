@@ -12,8 +12,12 @@ const PriceList = () =>{
             <li className="ammo-price">7.62x39 <span className="price">5 PLN</span></li>
             <li className="ammo-price">.223 Rem / 5.56 NATO <span className="price">5 PLN</span></li>
             <li className="ammo-price">.308 Win / 30-06 Springfield <span className="price">9 PLN</span></li>
+            <li className="ammo-price">40-70 Gov.<span className="price">22 PLN</span></li>
+            <li className="ammo-price">12/70 Śrut <span className="price">3 PLN</span></li>
+            <li className="ammo-price">12/70 Loftka <span className="price">6 PLN</span></li>
             <li className="ammo-price">12/70 Slug <span className="price">8 PLN</span></li>
-            Za stanowisko:
+        </ul> 
+        <ul className="ammo-price-list">Za stanowisko:
             <li className="ammo-price">30 min<span className="price">20 PLN</span></li>
             <li className="ammo-price">60 min<span className="price">40 PLN</span></li>
             <li className="ammo-price">2 godziny<span className="price">60 PLN</span></li>
