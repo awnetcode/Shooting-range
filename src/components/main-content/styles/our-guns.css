@@ -1,5 +1,12 @@
-.gun-area{
+.guns-area{
     display: flex;
+    flex-wrap: wrap;
+}
+
+.gun-area{
+    width: 50%;
+    display: flex;
+    align-items: center;
     column-gap: 30px;
     padding: 20px;
 }
@@ -11,4 +18,6 @@
 
 .gun-image{
     width: 400px;
+    border-radius: 8px;
+    /* box-shadow: 0 0 5px 5px white; */
 }
