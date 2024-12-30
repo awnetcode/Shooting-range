@@ -7,15 +7,16 @@ const PriceList = () =>{
         <ul className="ammo-price-list">Za wystrzeloną amunicję:
             <li className="ammo-price">.22 LR <span className="price">1 PLN</span></li>
             <li className="ammo-price">9x19 <span className="price">2.50 PLN</span></li>
-            <li className="ammo-price">.38 spec. / 7.62x25 / 7.56 Browning <span className="price">4 PLN</span></li>
+            <li className="ammo-price">.38 spec. / 7.62x25 / 7.56 Browning / 9 Browning <span className="price">4 PLN</span></li>
             <li className="ammo-price">.45 ACP / .357 Magnum <span className="price">5 PLN</span></li>
-            <li className="ammo-price">7.62x39 <span className="price">5 PLN</span></li>
-            <li className="ammo-price">.223 Rem / 5.56 NATO <span className="price">5 PLN</span></li>
+            <li className="ammo-price">7.62x39 / .223 Rem<span className="price">5 PLN</span></li>
             <li className="ammo-price">.308 Win / 30-06 Springfield <span className="price">9 PLN</span></li>
-            <li className="ammo-price">40-70 Gov.<span className="price">22 PLN</span></li>
             <li className="ammo-price">12/70 Śrut <span className="price">3 PLN</span></li>
             <li className="ammo-price">12/70 Loftka <span className="price">6 PLN</span></li>
             <li className="ammo-price">12/70 Slug <span className="price">8 PLN</span></li>
+            <li className="ammo-price">7.62 Nagant <span className="price">13 PLN</span></li>
+            <li className="ammo-price">40-70 Gov.<span className="price">22 PLN</span></li>
+            <li className="ammo-price">.50 AE <span className="price">32 PLN</span></li>
         </ul> 
         <ul className="ammo-price-list">Za stanowisko:
             <li className="ammo-price">30 min<span className="price">20 PLN</span></li>

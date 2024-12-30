@@ -31,7 +31,7 @@ const Main = ({content}) =>{
             content = <OurGuns />
             break;
 
-        default: content ='Waiting for content...'
+        default: content = <ShootingRange />
     }
 
     return(

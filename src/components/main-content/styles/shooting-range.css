@@ -1,0 +1,47 @@
+.shooting-range{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.shooting-range-part{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap; 
+    gap: 2rem;  
+}
+
+.part-content{
+    width: 50%;
+    padding: 2rem;
+    border-radius: .5rem;
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+    box-shadow: 0 0 5px 5px  black;
+}
+
+.shooting-range-part img{
+    width: 500px;
+}
+
+.part-content h2{
+    text-align: center;
+    font-weight: 400;
+
+}
+
+.shooting-range-part p{
+    text-indent: 3rem;
+    text-align: justify;
+    line-height: 1.5rem;
+}
+
+.part-content ul{
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+    list-style-type: none;
+}
