@@ -1,11 +1,14 @@
 .navigation-list{
     width: 100%;
+    background-color: #242424;
     list-style-type: none;
     display: flex;
     align-items: center;
     justify-content: flex-end;
     gap: 20px;
-    padding: 10px;
+    padding: 1rem;
+    box-shadow: var(--main-shadow);    
+    animation: menuOpen 4s linear ;
 }
 
 .navigation-link{
@@ -15,5 +18,16 @@
 }
 
 .navigation-link:hover{
-    box-shadow: 0 0 5px 5px white;
+    box-shadow: var(--silver-shadow);
+}
+
+@keyframes menuOpen{
+    from{
+        opacity: 0;
+    }
+
+    to{
+        opacity: 1;
+    }
+    
 }

@@ -26,7 +26,7 @@ const PriceList = () =>{
             <li className="ammo-price">Opieka instruktora<span className="price">20 PLN / godz.</span></li>
             <li className="ammo-price">Cel reaktywny<span className="price">30 PLN / godz.</span></li>
         </ul>  
-        <p>W przypadku strzelania z broni i amunicji obiektowej opieka instruktorska i opłata za wejście jest w cenie wystrzelonej amunicji.</p>
+        <p>W przypadku strzelania z broni i amunicji obiektowej opieka instruktorska i opłata za wejście jest wliczona w cenę .</p>
         </>
     )
 }

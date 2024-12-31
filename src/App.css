@@ -1,14 +1,8 @@
 #root {
   width: 100%;
-  padding: 2rem;
   display: flex;
   flex-direction: column;
   gap: 3rem;
-}
-
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+  background-image: url('./images/handguns table.jpg');
+  background-size: contain;
 }

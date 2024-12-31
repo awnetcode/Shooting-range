@@ -1,5 +1,8 @@
 header{
     text-align: center;
+    background-color: #242424;
+    padding: 2rem;
+    box-shadow: var(--main-shadow);
 }
 
 header h1{
