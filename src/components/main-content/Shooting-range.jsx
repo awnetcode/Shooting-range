@@ -28,7 +28,7 @@ const ShootingRange = () =>{
             <div className="shooting-range-part">
                 <div className="part-content">
                     <h2>O Strzelnicy.</h2>
-                    <p>
+                    <div>
                         <ul>
                             Dysponujemy pięcioma profesjonalnymi osiami strzeleckimi:
                             <li>Oś długodystansowa o długości 200 metrów wyposażona w tarczownice i gongi.</li>
@@ -36,7 +36,7 @@ const ShootingRange = () =>{
                             <li>Oś średniodystansowa o długości 100 metrów wyposażona w tarczownice, gongi i popery.</li>
                             <li>Dwie osie taktyczno-dynamiczne o długości 25 m wyposażone w tarczownice i różne cele reaktywne</li>
                         </ul>
-                    </p>
+                    </div>
                 </div>
                 <img src={longRange} alt="" className="part-image" />
                 <img src={medRange} alt="" className="part-image" />

@@ -5,11 +5,12 @@ import youtube from '../assets/icons8-youtube.svg';
 import instagram from '../assets/icons8-instagram.svg';
 //import target from '../assets/target-svgrepo-com.svg';
 
-const Header = () =>{
+// eslint-disable-next-line react/prop-types
+const Header = ( {isScrolled} ) =>{
 
     return(
         <>
-        <header>
+        <header className={`header ${ isScrolled ? 'hidden' : ''}`}>
             <h1>Strzelnica Dziki Wschód</h1> 
             <div className="header-social">
                 <p>Odwiedź nas:</p>
