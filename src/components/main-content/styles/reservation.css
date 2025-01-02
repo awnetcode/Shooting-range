@@ -1,5 +1,21 @@
-.form-area{
+.reservation-nav{
+    min-width: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 1rem;
+}
+.nav-button{
+    padding: .5rem 1rem;
+    width: 100px;
+    box-shadow: var(--main-shadow);
+    text-align: center;
+    cursor: pointer;
+}
 
+.form-area{
+    box-shadow: var(--main-shadow);
+    padding: 1rem;
 }
 
 .reservation-info{
@@ -39,4 +55,39 @@
     background: #000;
     margin-top: 2rem;
     cursor: pointer;
+}
+
+.calendar{
+    border: 1px solid silver;
+    padding: 1rem;
+}
+
+.calendar-header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.day-of-week{
+    border: 1px solid silver;
+    width: 60px;
+    text-align: center;
+    padding: .5rem;
+}
+
+.calendar-days{
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 1rem;
+    padding-top: 1rem;
+}
+
+.calendar-day{
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid silver;
 }

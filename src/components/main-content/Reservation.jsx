@@ -1,24 +1,37 @@
 import './styles/reservation.css';
 
+import { useState } from 'react';
+
+import ReservationForm from './Reservation-form';
+import ReservationCalendar from './Reservation-calendar';
+
 const Reservation = () =>{
+
+    const [isActive, setActive] = useState('book');
+    const [buttonActive, setButtonActive] = useState(false);
+    let content;
+
+    switch(isActive){
+        case 'book':
+            content = <ReservationForm />
+            break;
+        case 'check':
+            content = <ReservationCalendar />
+    }
+
     return(
         <>
+        <div className="reservation-nav">
+            <span  
+            onClick={() => {setActive('book'), setButtonActive(true)}}
+            className={buttonActive == true ? "nav-button" : "nav-button-active"}
+                >Zarezerwuj</span>
+            <span className="nav-button" onClick={
+                () => {setActive('check'), setButtonActive(true)}
+                }>Zobacz</span>
+        </div>
         <div className="form-area">
-            <h1>Rezerwacja:</h1>
-            <p className='reservation-info'>
-                Aby zarezerwować termin wypełnij ten krótki formularz. Dotyczy tylko osób z własną bronią i amunicją. Pamiętaj, aby przynajmniej jedna osoba z Waszej grupy miała uprawnienia prowadzącego strzelanie. Rezerwacja torów pomaga nam w utrzymaniu komfortu użytkowników i bezpieczeństwa strzelań.
-            </p>
-            <form className="application-form" action="#">
-            <label htmlFor="date">Wybierz datę:</label>
-            <input name='date' className='date-select' type="date" placeholder='Wybierz ->' />
-            <label htmlFor="name">Imię:</label>
-            <input type="text" name='name' className='text-input'/>
-            <label htmlFor="license">Nr Prowadzącego Strzelanie:</label>
-            <input type="text" name='license' className='text-input'/>
-            <label htmlFor="phone">Telefon:</label>
-            <input type="text" name='phone' className='text-input'/>
-            </form>
-            <button className='form-button' type='submit'>Zgłoś na Policję!</button>
+            {content}     
         </div>
         </>
     )

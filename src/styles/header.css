@@ -4,16 +4,13 @@
     padding: 2rem;
     box-shadow: var(--main-shadow);
     height: 220px;
-    opacity: 1;
-    transition: height 1s linear;
-   /* transition: opacity 1s linear; */
     transition: transform 1s linear;
 }
 
 .header.hidden {
-     height: 0;
-    /*opacity: 0; */
-    transform: translateY(-100%);
+    transition: height 1s linear;
+    height: 0;
+    transform: translateY(-120%);
   }
 
 header h1{
