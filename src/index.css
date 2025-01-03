@@ -25,5 +25,8 @@ body {
   font-size: 16px;
   display: flex;
   width: 100vw;
-  min-height: 100vh;
+  overflow-y: scroll;
+  background-image: url('./images/handguns table.jpg');
+  background-size: contain;
+  background-attachment: fixed;
 }

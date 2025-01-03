@@ -1,16 +1,14 @@
-.header{
+.page-header{
     text-align: center;
     background-color: #242424;
     padding: 2rem;
     box-shadow: var(--main-shadow);
-    height: 220px;
-    transition: transform 1s linear;
+    height: 220px;  
 }
 
-.header.hidden {
+.page-header.hidden {
     transition: height 1s linear;
     height: 0;
-    transform: translateY(-120%);
   }
 
 header h1{

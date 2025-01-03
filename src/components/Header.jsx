@@ -10,7 +10,7 @@ const Header = ( {isScrolled} ) =>{
 
     return(
         <>
-        <header className={`header ${ isScrolled ? 'hidden' : ''}`}>
+        <header className={`page-header ${ isScrolled ? 'hidden' : ''}`}>
             <h1>Strzelnica Dziki Wschód</h1> 
             <div className="header-social">
                 <p>Odwiedź nas:</p>

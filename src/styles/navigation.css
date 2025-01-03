@@ -9,6 +9,9 @@
     padding: 1rem;
     box-shadow: var(--main-shadow);    
     animation: menuOpen 3s linear ;
+    position: sticky;
+    top: 0;
+    z-index: 3;
 }
 
 .navigation-link{
