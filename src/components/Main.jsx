@@ -6,7 +6,6 @@ import Reservation from './main-content/Reservation';
 import Statute from './main-content/Statute';
 import PriceList from './main-content/Price-list';
 import OurGuns from './main-content/Our-guns';
-import SimpleForm from './main-content/Form-action';
 
 // eslint-disable-next-line react/prop-types
 const Main = ({content}) =>{
@@ -30,9 +29,6 @@ const Main = ({content}) =>{
             break;
         case 'guns':
             content = <OurGuns />
-            break;
-        case 'form':
-            content = <SimpleForm />
             break;
 
         default: content = <ShootingRange />

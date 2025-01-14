@@ -12,7 +12,6 @@ const Navigation = ({setContent}) =>{
             <li className="navigation-link" onClick={() => setContent('statute')}>Regulamin</li>
             <li className="navigation-link" onClick={() => setContent('priceList')}>Cennik</li>
             <li className="navigation-link" onClick={() => setContent('guns')}>Sprzęt</li>
-            <li className="navigation-link" onClick={() => setContent('form')}>TestForm</li>
         </ul>
         </>
     )
