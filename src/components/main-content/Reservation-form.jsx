@@ -1,4 +1,5 @@
 import React from "react";
+import { Button, Box, TextField } from "@mui/material";
 
 class ReservationForm extends React.Component {
     constructor(props) {
@@ -7,8 +8,29 @@ class ReservationForm extends React.Component {
           date: '',
           name: '',
           license: '',
-          phone: ''
+          phone: '',
         };
+        this.commonTextFieldStyles = {
+  '& .MuiOutlinedInput-root': {
+    '& fieldset': {
+      borderColor: 'silver', // kolor ramki
+      cursor:'pointer'
+    },
+    '&:hover fieldset': {
+      borderColor: 'dimgray', // przy najechaniu
+    },
+    '&.Mui-focused fieldset': {
+      borderColor: '#247bd2', // przy focusie (kliknięciu)
+    },
+  },
+  '& .MuiInputLabel-root': {
+    color: 'silver', // kolor labela
+  },
+  '& .MuiInputBase-input': {
+    color: 'silver', // kolor tekstu w środku
+    cursor: 'pointer'
+  },
+};
     }
 
     handleInputChange = (event) => {
@@ -42,9 +64,11 @@ class ReservationForm extends React.Component {
         return(
             <>
                 <h1>Rezerwacja:</h1>
+                <Box>
                 <p className='reservation-info'>
                     Aby zarezerwować termin wypełnij ten krótki formularz. Dotyczy tylko osób z własną bronią i amunicją. Pamiętaj, aby przynajmniej jedna osoba z Waszej grupy miała uprawnienia prowadzącego strzelanie. Rezerwacja torów pomaga nam w utrzymaniu komfortu użytkowników i bezpieczeństwa strzelań.
                 </p>
+                </Box>
                 <form className="application-form">
                 <label htmlFor="date">Wybierz datę:</label>
                 <input 
@@ -53,13 +77,10 @@ class ReservationForm extends React.Component {
                 type="date" 
                 onChange={this.handleInputChange}
                 />
-                <label htmlFor="name">Imię:</label>
-                <input 
-                type="text" 
-                name='name' 
-                className='text-input'
-                onChange={this.handleInputChange}
-                />
+                <TextField sx={this.commonTextFieldStyles} id="outlined-basic" label="Imię" variant="outlined" onChange={this.handleInputChange}/>
+                <TextField sx={this.commonTextFieldStyles} id="outlined-basic" label="Telefon" variant="outlined" onChange={this.handleInputChange}/>
+                <TextField sx={this.commonTextFieldStyles} id="outlined-basic" label="Nr Prowadzącego strzelanie" variant="outlined" onChange={this.handleInputChange}/>
+                <TextField sx={this.commonTextFieldStyles} id="outlined-basic" label="Ilość osób" variant="outlined" onChange={this.handleInputChange}/>
                 <label htmlFor="license">Nr Prowadzącego Strzelanie:</label>
                 <input 
                 type="text" 
@@ -75,7 +96,7 @@ class ReservationForm extends React.Component {
                 onChange={this.handleInputChange}
                 />
                 </form>
-                <button className='form-button' type='submit' onClick={this.saveToServer}>Zgłoś na Policję!</button> 
+                <Button variant="outlined" onClick={this.saveToServer}>Zgłoś</Button>
             </>
         )
       }

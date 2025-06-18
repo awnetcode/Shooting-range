@@ -1,43 +1,53 @@
 import './styles/reservation.css';
 
 import { useState } from 'react';
+import { Box, Tabs, Tab } from '@mui/material';
 
 import ReservationForm from './Reservation-form';
 import ReservationCalendar from './Reservation-calendar';
 
 const Reservation = () =>{
 
-    const [isActive, setActive] = useState('book');
-    const [buttonActive, setButtonActive] = useState(true);
+    const[value, setValue] = useState(0)
+
+
     let content;
 
-    switch(isActive){
-        case 'book':
-            content = <ReservationForm />
-            break;
-        case 'check':
-            content = <ReservationCalendar />
-            break;
+    function a11yProps(index) {
+  return {
+    id: `simple-tab-${index}`,
+    'aria-controls': `simple-tabpanel-${index}`,
+  };
+}
 
-        default: content = <ReservationForm />
+    const handleChange = (event, newValue) => {
+    setValue(newValue);
+  };
+
+  switch(value){
+    case 0:
+        content = <ReservationForm/>;
         break;
-    };
+    case 1:
+        content = <ReservationCalendar/>
+        break;
+  }
 
     return(
         <>
-        <div className="reservation-nav">
-            <span  
-            onClick={() => {setActive('book'), setButtonActive(!buttonActive)}}
-            className={buttonActive == true && isActive == 'book' ? "nav-button" : "nav-button-active"}
-                >Zarezerwuj</span>
-            <span
-              onClick={() => {setActive('check'), setButtonActive(!buttonActive)}}
-              className={buttonActive == true && isActive == 'check' ? "nav-button" : "nav-button-active"}
-                >Zobacz</span>
-        </div>
+        <Box>
+         <Tabs value={value} onChange={handleChange} aria-label="basic tabs example"
+         sx={{
+            mb:'30px',
+            color:'white'
+        }}>
+          <Tab label="rezerwacja" {...a11yProps(0)} sx={{color:'inherit'}}/>
+          <Tab label="zobacz" {...a11yProps(1)} sx={{color:'inherit'}}/>
+        </Tabs>
         <div className="form-area"> 
             {content}     
         </div>
+        </Box>
         </>
     )
 }
